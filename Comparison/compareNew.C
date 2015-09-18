@@ -19,7 +19,7 @@ void compareNew(){
   TFile *fileMIT=new TFile("InputsMIT/alphaD0.root");
   TH1D *hspectrumMIT = (TH1D*)fileMIT->Get("hPtCor");
   TH1D *hrawMIT = (TH1D*)fileMIT->Get("hPt");
-  hspectrumMIT->Scale(0.90*1./(2*0.0388*28042407.));
+  hspectrumMIT->Scale(1./(2*0.0388*28042407.));
   
   TCanvas*c=new TCanvas("c","",500,500);
   c->cd();
