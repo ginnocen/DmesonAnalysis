@@ -1,4 +1,4 @@
-//Jian file: (1/2*fprompt*Yields)/(Nmb*BR*efficiency*TAA)  
+//Jian file: Ds
 //Nmb=3.01781340000000000e+07
 //TAA=5.67*1e-9
 //BR=0.0388
@@ -21,7 +21,7 @@ void compare(){
   TFile *fileMIT=new TFile("InputsMIT/alphaD0.root");
   TH1D *hspectrumMIT = (TH1D*)fileMIT->Get("hPtCor");
   TH1D *hrawMIT = (TH1D*)fileMIT->Get("hPt");
-  hspectrumMIT->Scale(0.90*1./(2*2*0.0388*3.01781340000000000e+07));
+  hspectrumMIT->Scale(0.90*1./(2*0.0388*3.01781340000000000e+07));
   
   TCanvas*c=new TCanvas("c","",500,500);
   c->cd();
