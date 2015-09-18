@@ -40,23 +40,54 @@ void check(){
   int Dsize,Dsize2;
   Double_t Dpt[maxDperevent];
   Double_t Dpt2[maxDperevent];
+  Double_t Dmass[maxDperevent];
+  Double_t Dmass2[maxDperevent];
+
+  Double_t Dtrk1MassHypo[maxDperevent];
+  Double_t Dtrk2MassHypo[maxDperevent];
+  
+  Double_t Dtrk1Pt[maxDperevent];
+  Double_t Dtrk2Pt[maxDperevent];
+  Double_t Dtrk1Pt2[maxDperevent];
+  Double_t Dtrk2Pt2[maxDperevent];
+  
+  Double_t Dtrk1MassHypo2[maxDperevent];
+  Double_t Dtrk2MassHypo2[maxDperevent];
+
+
 
   nt->SetBranchAddress("EvtNo",&EvtNo);
   nt->SetBranchAddress("Dsize",&Dsize);
   nt->SetBranchAddress("Dpt",Dpt);
+  nt->SetBranchAddress("Dmass",Dmass);
+  nt->SetBranchAddress("Dtrk1Pt",Dtrk1Pt);
+  nt->SetBranchAddress("Dtrk2Pt",Dtrk2Pt);
+  nt->SetBranchAddress("Dtrk1MassHypo",Dtrk1MassHypo);
+  nt->SetBranchAddress("Dtrk2MassHypo",Dtrk2MassHypo);
 
   nt2->SetBranchAddress("EvtNo",&EvtNo2);
   nt2->SetBranchAddress("Dsize",&Dsize2);
   nt2->SetBranchAddress("Dpt",Dpt2);
+  nt2->SetBranchAddress("Dmass",Dmass2);
+  nt2->SetBranchAddress("Dtrk1Pt",Dtrk1Pt2);
+  nt2->SetBranchAddress("Dtrk2Pt",Dtrk2Pt2);
+  nt2->SetBranchAddress("Dtrk1MassHypo",Dtrk1MassHypo2);
+  nt2->SetBranchAddress("Dtrk2MassHypo",Dtrk2MassHypo2);
+
+
 
   
   
   for (int entry=0;entry<nt->GetEntries();entry++){ 
     nt->GetEntry(entry);
-    //cout<<"EvtNo="<<EvtNo<<endl;
     if(EvtNo==30362945){
       for (int i=0;i<Dsize;i++){ 
         cout<<"Kpi Dmeson pt"<<Dpt[i]<<endl;
+        cout<<"Kpi Dmeson mass"<<Dmass[i]<<endl;
+        cout<<"Kpi track 1 mass"<<Dtrk1Pt[i]<<endl;
+        cout<<"Kpi track 2 mass"<<Dtrk2Pt[i]<<endl;
+        cout<<"Kpi hyp 1 "<<Dtrk1MassHypo[i]<<endl;
+        cout<<"Kpi hyp 2 "<<Dtrk2MassHypo[i]<<endl;
       }
     }
   }  
@@ -66,8 +97,16 @@ void check(){
     if(EvtNo2==30362945){
       for (int i=0;i<Dsize2;i++){ 
         cout<<"piK Dmeson pt"<<Dpt2[i]<<endl;
+        cout<<"piK Dmeson mass"<<Dmass2[i]<<endl;
+        cout<<"piK track 1 mass"<<Dtrk1Pt2[i]<<endl;
+        cout<<"piK track 2 mass"<<Dtrk2Pt2[i]<<endl;
+        cout<<"piK hyp 1 "<<Dtrk1MassHypo2[i]<<endl;
+        cout<<"piK hyp 2 "<<Dtrk2MassHypo2[i]<<endl;
+
+
       }
     }
+  // cout<<"new event"<<endl;    
   }  
 
 }
