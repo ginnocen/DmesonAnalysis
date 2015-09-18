@@ -2,10 +2,9 @@
 //Nmb=3.01781340000000000e+07
 //TAA=5.67*1e-9
 //BR=0.0388
-//fprompt=0.9
 
-//D0_pbpb_spectrum modified=(1/2*fprompt*Yields)/(Nmb*BR*efficiency) 
-//my spectrum modified =1/2*prompt/(BR*Nmb) *Yields/Eff
+//D0_pbpb_spectrum modified=(1/2*Yields)/(Nmb*BR*efficiency) 
+//my spectrum modified =1/2/(BR*Nmb) *Yields/Eff
 
 //Our file  Yields/efficiency
 
